@@ -124,7 +124,7 @@ def conditional_cc_toolchain(name, darwin, absolute_paths = False):
             linker_files = ":empty",
             objcopy_files = ":empty",
             strip_files = ":empty",
-            supports_param_files = 0 if darwin else 1,
+            supports_param_files = 1,
             toolchain_config = toolchain_config,
         )
     else:
@@ -144,6 +144,6 @@ def conditional_cc_toolchain(name, darwin, absolute_paths = False):
             linker_files = name + "-linker-files",
             objcopy_files = ":objcopy",
             strip_files = ":empty",
-            supports_param_files = 0 if darwin else 1,
+            supports_param_files = 1,
             toolchain_config = toolchain_config,
         )
